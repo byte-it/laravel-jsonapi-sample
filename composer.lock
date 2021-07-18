@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e73c72ffcd8f6fd0f1c2bf3d0341932",
+    "content-hash": "5fec2be351a24b5bad27ea36ab3c34e7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,13 +121,20 @@
         {
             "name": "byteit/openapi-spec-generator",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/byte-it/openapi-spec-generator.git",
+                "reference": "75071db987cc15e01a69c984955ecaae245d8910"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../php-packages/openapi-spec-generator",
-                "reference": "6a275b7ee916aef2a0afa866eaeade75e3dfe2ca"
+                "type": "zip",
+                "url": "https://api.github.com/repos/byte-it/openapi-spec-generator/zipball/75071db987cc15e01a69c984955ecaae245d8910",
+                "reference": "75071db987cc15e01a69c984955ecaae245d8910",
+                "shasum": ""
             },
             "require": {
-                "cebe/php-openapi": "^1.5",
+                "goldspecdigital/oooas": "^2.8",
+                "justinrainbow/json-schema": "^5.2",
                 "laravel-json-api/hashids": "^1.0@beta",
                 "php": "^8.0"
             },
@@ -137,6 +144,7 @@
                 "phpunit/phpunit": "^9.5",
                 "symfony/yaml": "^5.3@beta"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -153,19 +161,7 @@
                     "LaravelJsonApi\\OpenApiSpec\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "LaravelJsonApi\\OpenApiSpec\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit --coverage-html coverage"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -177,80 +173,16 @@
                 },
                 {
                     "name": "Johannes Kees",
-                    "homepage": "https://github.com/byte-it",
-                    "email": "johannes@lets-byte.it"
+                    "email": "johannes@lets-byte.it",
+                    "homepage": "https://github.com/byte-it"
                 }
             ],
             "description": "Creates Open API spec for a Laravel JSON:API",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "cebe/php-openapi",
-            "version": "1.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cebe/php-openapi.git",
-                "reference": "8f1f70688fd4bea04410718616450a38b7b8c40b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cebe/php-openapi/zipball/8f1f70688fd4bea04410718616450a38b7b8c40b",
-                "reference": "8f1f70688fd4bea04410718616450a38b7b8c40b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "justinrainbow/json-schema": "^5.0",
-                "php": ">=7.1.0",
-                "symfony/yaml": "^3.4 | ^4.0 | ^5.0"
-            },
-            "require-dev": {
-                "apis-guru/openapi-directory": "1.0.0",
-                "cebe/indent": "*",
-                "mermade/openapi3-examples": "1.0.0",
-                "nexmo/api-specification": "1.0.0",
-                "oai/openapi-specification": "3.0.3",
-                "phpstan/phpstan": "^0.12.0",
-                "phpunit/phpunit": "^6.5 || ^7.5 || ^8.5 || ^9.4"
-            },
-            "bin": [
-                "bin/php-openapi"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "cebe\\openapi\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Carsten Brandt",
-                    "email": "mail@cebe.cc",
-                    "homepage": "https://cebe.cc/",
-                    "role": "Creator"
-                }
-            ],
-            "description": "Read and write OpenAPI yaml/json files and make the content accessable in PHP objects.",
-            "homepage": "https://github.com/cebe/php-openapi#readme",
-            "keywords": [
-                "openapi"
-            ],
             "support": {
-                "issues": "https://github.com/cebe/php-openapi/issues",
-                "source": "https://github.com/cebe/php-openapi"
+                "issues": "https://github.com/byte-it/openapi-spec-generator/issues",
+                "source": "https://github.com/byte-it/openapi-spec-generator/tree/0.1.0"
             },
-            "time": "2021-05-24T11:32:07+00:00"
+            "time": "2021-07-18T18:53:26+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -690,6 +622,66 @@
                 }
             ],
             "time": "2021-04-26T11:24:25+00:00"
+        },
+        {
+            "name": "goldspecdigital/oooas",
+            "version": "v2.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goldspecdigital/oooas.git",
+                "reference": "b5c48ce12eb15261e7eeaff6b477cbff36b56cbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goldspecdigital/oooas/zipball/b5c48ce12eb15261e7eeaff6b477cbff36b56cbf",
+                "reference": "b5c48ce12eb15261e7eeaff6b477cbff36b56cbf",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "justinrainbow/json-schema": "^5.2",
+                "phpunit/phpunit": "^7.3"
+            },
+            "suggest": {
+                "justinrainbow/json-schema": "Required to perform validation (^5.2)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GoldSpecDigital\\ObjectOrientedOAS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Inamdar",
+                    "email": "matt@goldspecdigital.com"
+                },
+                {
+                    "name": "Vladimir Yuldashev",
+                    "email": "vladimir.yuldashev@gmail.com"
+                }
+            ],
+            "description": "An object oriented approach to generating OpenAPI specs, implemented in PHP.",
+            "homepage": "https://github.com/goldspecdigital/oooas",
+            "keywords": [
+                "oas",
+                "openapi",
+                "php",
+                "swagger"
+            ],
+            "support": {
+                "issues": "https://github.com/goldspecdigital/oooas/issues",
+                "source": "https://github.com/goldspecdigital/oooas/tree/v2.8.2"
+            },
+            "time": "2020-12-23T12:06:58+00:00"
         },
         {
             "name": "graham-campbell/manager",
@@ -1206,16 +1198,16 @@
         },
         {
             "name": "laravel-json-api/core",
-            "version": "v1.0.0-beta.4",
+            "version": "v1.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-json-api/core.git",
-                "reference": "10db55dd00516c0c77e4627e1e653cab795a085e"
+                "reference": "d2ccf9c84af87608c11b97fa6c6a972349d96ad8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-json-api/core/zipball/10db55dd00516c0c77e4627e1e653cab795a085e",
-                "reference": "10db55dd00516c0c77e4627e1e653cab795a085e",
+                "url": "https://api.github.com/repos/laravel-json-api/core/zipball/d2ccf9c84af87608c11b97fa6c6a972349d96ad8",
+                "reference": "d2ccf9c84af87608c11b97fa6c6a972349d96ad8",
                 "shasum": ""
             },
             "require": {
@@ -1264,22 +1256,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-json-api/core/issues",
-                "source": "https://github.com/laravel-json-api/core/tree/v1.0.0-beta.4"
+                "source": "https://github.com/laravel-json-api/core/tree/v1.0.0-beta.5"
             },
-            "time": "2021-06-02T12:48:41+00:00"
+            "time": "2021-07-10T09:45:09+00:00"
         },
         {
             "name": "laravel-json-api/eloquent",
-            "version": "v1.0.0-beta.5",
+            "version": "v1.0.0-beta.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-json-api/eloquent.git",
-                "reference": "09229f02ea2227b99b0a834e0df72373b91dfee3"
+                "reference": "1f22c17bedac38ae3c47336b38d8fd44a46934c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-json-api/eloquent/zipball/09229f02ea2227b99b0a834e0df72373b91dfee3",
-                "reference": "09229f02ea2227b99b0a834e0df72373b91dfee3",
+                "url": "https://api.github.com/repos/laravel-json-api/eloquent/zipball/1f22c17bedac38ae3c47336b38d8fd44a46934c5",
+                "reference": "1f22c17bedac38ae3c47336b38d8fd44a46934c5",
                 "shasum": ""
             },
             "require": {
@@ -1328,9 +1320,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-json-api/eloquent/issues",
-                "source": "https://github.com/laravel-json-api/eloquent/tree/v1.0.0-beta.5"
+                "source": "https://github.com/laravel-json-api/eloquent/tree/v1.0.0-beta.6"
             },
-            "time": "2021-06-02T12:56:03+00:00"
+            "time": "2021-07-10T10:39:11+00:00"
         },
         {
             "name": "laravel-json-api/encoder-neomerx",
@@ -1402,16 +1394,16 @@
         },
         {
             "name": "laravel-json-api/exceptions",
-            "version": "v1.0.0-beta.3",
+            "version": "v1.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-json-api/exceptions.git",
-                "reference": "a00178a757a4aa0d22acb396a358c0f934d51dd9"
+                "reference": "4c0fdca00e957f3327bf79ab796803cd71be523a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-json-api/exceptions/zipball/a00178a757a4aa0d22acb396a358c0f934d51dd9",
-                "reference": "a00178a757a4aa0d22acb396a358c0f934d51dd9",
+                "url": "https://api.github.com/repos/laravel-json-api/exceptions/zipball/4c0fdca00e957f3327bf79ab796803cd71be523a",
+                "reference": "4c0fdca00e957f3327bf79ab796803cd71be523a",
                 "shasum": ""
             },
             "require": {
@@ -1419,12 +1411,11 @@
                 "illuminate/contracts": "^8.0",
                 "illuminate/pipeline": "^8.0",
                 "laravel-json-api/core": "^1.0.0-beta.1",
+                "laravel-json-api/validation": "^1.0.0-beta.1",
                 "php": "^7.4|^8.0"
             },
             "require-dev": {
-                "laravel-json-api/spec": "^1.0.0-beta.1",
                 "laravel-json-api/testing": "^1.0.0-beta.1",
-                "laravel-json-api/validation": "^1.0.0-beta.1",
                 "orchestra/testbench": "^6.9",
                 "phpunit/phpunit": "^9.5"
             },
@@ -1463,22 +1454,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-json-api/exceptions/issues",
-                "source": "https://github.com/laravel-json-api/exceptions/tree/v1.0.0-beta.3"
+                "source": "https://github.com/laravel-json-api/exceptions/tree/v1.0.0-beta.4"
             },
-            "time": "2021-04-26T12:59:13+00:00"
+            "time": "2021-07-10T10:32:46+00:00"
         },
         {
             "name": "laravel-json-api/hashids",
-            "version": "v1.0.0-beta.2",
+            "version": "v1.0.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-json-api/hashids.git",
-                "reference": "cbe36ea741540eccc8750b1b1a0332143d3ba385"
+                "reference": "2506b656209980380a88cbcf600b0214f0cde206"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-json-api/hashids/zipball/cbe36ea741540eccc8750b1b1a0332143d3ba385",
-                "reference": "cbe36ea741540eccc8750b1b1a0332143d3ba385",
+                "url": "https://api.github.com/repos/laravel-json-api/hashids/zipball/2506b656209980380a88cbcf600b0214f0cde206",
+                "reference": "2506b656209980380a88cbcf600b0214f0cde206",
                 "shasum": ""
             },
             "require": {
@@ -1526,37 +1517,37 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-json-api/hashids/issues",
-                "source": "https://github.com/laravel-json-api/hashids/tree/v1.0.0-beta.2"
+                "source": "https://github.com/laravel-json-api/hashids/tree/v1.0.0-beta.3"
             },
-            "time": "2021-04-20T13:19:09+00:00"
+            "time": "2021-07-10T10:35:30+00:00"
         },
         {
             "name": "laravel-json-api/laravel",
-            "version": "v1.0.0-beta.4",
+            "version": "v1.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-json-api/laravel.git",
-                "reference": "fbb12bd141d2179e3b324fec9c1afe243ad50133"
+                "reference": "5dbb35824301b1811647e9359b05c3c6d5fad70e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-json-api/laravel/zipball/fbb12bd141d2179e3b324fec9c1afe243ad50133",
-                "reference": "fbb12bd141d2179e3b324fec9c1afe243ad50133",
+                "url": "https://api.github.com/repos/laravel-json-api/laravel/zipball/5dbb35824301b1811647e9359b05c3c6d5fad70e",
+                "reference": "5dbb35824301b1811647e9359b05c3c6d5fad70e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "laravel-json-api/core": "^1.0.0-beta.4",
-                "laravel-json-api/eloquent": "^1.0.0-beta.5",
+                "laravel-json-api/core": "^1.0.0-beta.5",
+                "laravel-json-api/eloquent": "^1.0.0-beta.6",
                 "laravel-json-api/encoder-neomerx": "^1.0.0-beta.1",
-                "laravel-json-api/exceptions": "^1.0.0-beta.2",
-                "laravel-json-api/spec": "^1.0.0-beta.1",
+                "laravel-json-api/exceptions": "^1.0.0-beta.4",
+                "laravel-json-api/spec": "^1.0.0-beta.2",
                 "laravel-json-api/validation": "^1.0.0-beta.2",
-                "laravel/framework": "^8.0",
+                "laravel/framework": "^8.30",
                 "php": "^7.4|^8.0"
             },
             "require-dev": {
-                "laravel-json-api/hashids": "^1.0.0-beta.2",
+                "laravel-json-api/hashids": "^1.0.0-beta.3",
                 "laravel-json-api/testing": "^1.0.0-beta.1",
                 "orchestra/testbench": "^6.9",
                 "phpunit/phpunit": "^9.5"
@@ -1605,9 +1596,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-json-api/laravel/issues",
-                "source": "https://github.com/laravel-json-api/laravel/tree/v1.0.0-beta.4"
+                "source": "https://github.com/laravel-json-api/laravel/tree/v1.0.0-beta.5"
             },
-            "time": "2021-06-02T12:59:56+00:00"
+            "time": "2021-07-10T10:45:36+00:00"
         },
         {
             "name": "laravel-json-api/neomerx-json-api",
@@ -1680,16 +1671,16 @@
         },
         {
             "name": "laravel-json-api/spec",
-            "version": "v1.0.0-beta.1",
+            "version": "v1.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-json-api/spec.git",
-                "reference": "4fefed3f57a883c4b81100c290e4cc6b18158646"
+                "reference": "abf89268e99f57e227f9072d358b0a903d1e98e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-json-api/spec/zipball/4fefed3f57a883c4b81100c290e4cc6b18158646",
-                "reference": "4fefed3f57a883c4b81100c290e4cc6b18158646",
+                "url": "https://api.github.com/repos/laravel-json-api/spec/zipball/abf89268e99f57e227f9072d358b0a903d1e98e0",
+                "reference": "abf89268e99f57e227f9072d358b0a903d1e98e0",
                 "shasum": ""
             },
             "require": {
@@ -1744,22 +1735,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-json-api/spec/issues",
-                "source": "https://github.com/laravel-json-api/spec/tree/v1.0.0-beta.1"
+                "source": "https://github.com/laravel-json-api/spec/tree/v1.0.0-beta.2"
             },
-            "time": "2021-03-30T10:06:16+00:00"
+            "time": "2021-07-10T09:50:21+00:00"
         },
         {
             "name": "laravel-json-api/validation",
-            "version": "v1.0.0-beta.2",
+            "version": "v1.0.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-json-api/validation.git",
-                "reference": "11c6052129891f2d126fdd0ce40859e73d83955b"
+                "reference": "ef944de24306d08100cb0dacdab8bd6588806748"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-json-api/validation/zipball/11c6052129891f2d126fdd0ce40859e73d83955b",
-                "reference": "11c6052129891f2d126fdd0ce40859e73d83955b",
+                "url": "https://api.github.com/repos/laravel-json-api/validation/zipball/ef944de24306d08100cb0dacdab8bd6588806748",
+                "reference": "ef944de24306d08100cb0dacdab8bd6588806748",
                 "shasum": ""
             },
             "require": {
@@ -1813,22 +1804,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-json-api/validation/issues",
-                "source": "https://github.com/laravel-json-api/validation/tree/v1.0.0-beta.2"
+                "source": "https://github.com/laravel-json-api/validation/tree/v1.0.0-beta.3"
             },
-            "time": "2021-04-26T13:07:22+00:00"
+            "time": "2021-07-10T10:10:04+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v8.49.1",
+            "version": "v8.50.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "62aee1bfeefd82f160c7aa3b4c63cb2f053215c0"
+                "reference": "d892dbacbe3859cf9303ccda98ac8d782141d5ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/62aee1bfeefd82f160c7aa3b4c63cb2f053215c0",
-                "reference": "62aee1bfeefd82f160c7aa3b4c63cb2f053215c0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d892dbacbe3859cf9303ccda98ac8d782141d5ae",
+                "reference": "d892dbacbe3859cf9303ccda98ac8d782141d5ae",
                 "shasum": ""
             },
             "require": {
@@ -1838,7 +1829,7 @@
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
-                "league/commonmark": "^1.3",
+                "league/commonmark": "^1.3|^2.0",
                 "league/flysystem": "^1.1",
                 "monolog/monolog": "^2.0",
                 "nesbot/carbon": "^2.31",
@@ -1983,20 +1974,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-07-02T16:50:12+00:00"
+            "time": "2021-07-13T12:41:53+00:00"
         },
         {
             "name": "laravel/telescope",
-            "version": "v4.5.1",
+            "version": "v4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/telescope.git",
-                "reference": "77373b6dccfc0c4372f1a09c9064cbe7b6d1bf76"
+                "reference": "67bc1819a3f9b6cd3bac3c1fae506dcd7a8d8a48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/77373b6dccfc0c4372f1a09c9064cbe7b6d1bf76",
-                "reference": "77373b6dccfc0c4372f1a09c9064cbe7b6d1bf76",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/67bc1819a3f9b6cd3bac3c1fae506dcd7a8d8a48",
+                "reference": "67bc1819a3f9b6cd3bac3c1fae506dcd7a8d8a48",
                 "shasum": ""
             },
             "require": {
@@ -2045,9 +2036,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/telescope/issues",
-                "source": "https://github.com/laravel/telescope/tree/v4.5.1"
+                "source": "https://github.com/laravel/telescope/tree/v4.6.0"
             },
-            "time": "2021-06-22T15:36:07+00:00"
+            "time": "2021-07-13T14:59:41+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2119,16 +2110,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.6.5",
+            "version": "1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "44ffd8d3c4a9133e4bd0548622b09c55af39db5f"
+                "reference": "c4228d11e30d7493c6836d20872f9582d8ba6dcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/44ffd8d3c4a9133e4bd0548622b09c55af39db5f",
-                "reference": "44ffd8d3c4a9133e4bd0548622b09c55af39db5f",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/c4228d11e30d7493c6836d20872f9582d8ba6dcf",
+                "reference": "c4228d11e30d7493c6836d20872f9582d8ba6dcf",
                 "shasum": ""
             },
             "require": {
@@ -2216,7 +2207,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-26T11:57:13+00:00"
+            "time": "2021-07-17T17:13:23+00:00"
         },
         {
             "name": "league/flysystem",
@@ -2370,16 +2361,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.2.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1cb1cde8e8dd0f70cc0fe51354a59acad9302084"
+                "reference": "9738e495f288eec0b187e310b7cdbbb285777dbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1cb1cde8e8dd0f70cc0fe51354a59acad9302084",
-                "reference": "1cb1cde8e8dd0f70cc0fe51354a59acad9302084",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/9738e495f288eec0b187e310b7cdbbb285777dbe",
+                "reference": "9738e495f288eec0b187e310b7cdbbb285777dbe",
                 "shasum": ""
             },
             "require": {
@@ -2398,7 +2389,7 @@
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
                 "phpspec/prophecy": "^1.6.1",
-                "phpstan/phpstan": "^0.12.59",
+                "phpstan/phpstan": "^0.12.91",
                 "phpunit/phpunit": "^8.5",
                 "predis/predis": "^1.1",
                 "rollbar/rollbar": "^1.3",
@@ -2450,7 +2441,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.2.0"
+                "source": "https://github.com/Seldaek/monolog/tree/2.3.1"
             },
             "funding": [
                 {
@@ -2462,7 +2453,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-14T13:15:25+00:00"
+            "time": "2021-07-14T11:56:39+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -6189,16 +6180,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.10.2",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "43688227bbf27c43bc1ad83af224f135b6ef0ff4"
+                "reference": "dc6818335f50ccf0b90284784718ea9a82604286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/43688227bbf27c43bc1ad83af224f135b6ef0ff4",
-                "reference": "43688227bbf27c43bc1ad83af224f135b6ef0ff4",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/dc6818335f50ccf0b90284784718ea9a82604286",
+                "reference": "dc6818335f50ccf0b90284784718ea9a82604286",
                 "shasum": ""
             },
             "require": {
@@ -6206,7 +6197,6 @@
                 "ext-mbstring": "*",
                 "facade/flare-client-php": "^1.6",
                 "facade/ignition-contracts": "^1.0.2",
-                "filp/whoops": "^2.4",
                 "illuminate/support": "^7.0|^8.0",
                 "monolog/monolog": "^2.0",
                 "php": "^7.2.5|^8.0",
@@ -6262,7 +6252,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-06-11T06:57:25+00:00"
+            "time": "2021-07-12T15:55:51+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -6319,16 +6309,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.14.1",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1"
+                "reference": "89c6201c74db25fa759ff16e78a4d8f32547770e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1",
-                "reference": "ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/89c6201c74db25fa759ff16e78a4d8f32547770e",
+                "reference": "89c6201c74db25fa759ff16e78a4d8f32547770e",
                 "shasum": ""
             },
             "require": {
@@ -6378,22 +6368,22 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v.1.14.1"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.15.0"
             },
-            "time": "2021-03-30T06:27:33+00:00"
+            "time": "2021-07-06T20:39:40+00:00"
         },
         {
             "name": "filp/whoops",
-            "version": "2.13.0",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "2edbc73a4687d9085c8f20f398eebade844e8424"
+                "reference": "fdf92f03e150ed84d5967a833ae93abffac0315b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/2edbc73a4687d9085c8f20f398eebade844e8424",
-                "reference": "2edbc73a4687d9085c8f20f398eebade844e8424",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/fdf92f03e150ed84d5967a833ae93abffac0315b",
+                "reference": "fdf92f03e150ed84d5967a833ae93abffac0315b",
                 "shasum": ""
             },
             "require": {
@@ -6443,7 +6433,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.13.0"
+                "source": "https://github.com/filp/whoops/tree/2.14.0"
             },
             "funding": [
                 {
@@ -6451,7 +6441,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-04T12:00:00+00:00"
+            "time": "2021-07-13T12:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -6506,16 +6496,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.8.3",
+            "version": "v1.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "dc7a9ca301fc89e9eaa164d58eac39a39c2e93b0"
+                "reference": "51ecfe0f048f8f8e6c5617e02a1f67ca22817c98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/dc7a9ca301fc89e9eaa164d58eac39a39c2e93b0",
-                "reference": "dc7a9ca301fc89e9eaa164d58eac39a39c2e93b0",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/51ecfe0f048f8f8e6c5617e02a1f67ca22817c98",
+                "reference": "51ecfe0f048f8f8e6c5617e02a1f67ca22817c98",
                 "shasum": ""
             },
             "require": {
@@ -6562,7 +6552,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-06-29T21:27:36+00:00"
+            "time": "2021-07-15T07:35:41+00:00"
         },
         {
             "name": "mockery/mockery",
