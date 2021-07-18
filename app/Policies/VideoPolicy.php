@@ -53,7 +53,9 @@ class VideoPolicy
      */
     public function viewTags(?User $user, Video $video): bool
     {
-        return $this->view($user, $video);
+        return true;
+
+        //        return $this->view($user, $video);
     }
 
     /**
@@ -62,7 +64,9 @@ class VideoPolicy
      */
     public function create(?User $user): bool
     {
-        return !!$user;
+        return true;
+
+//        return !!$user;
     }
 
     /**
@@ -72,7 +76,9 @@ class VideoPolicy
      */
     public function update(?User $user, Video $video): bool
     {
-        return $this->owner($user, $video);
+        return true;
+
+//        return $this->owner($user, $video);
     }
 
     /**
@@ -83,9 +89,11 @@ class VideoPolicy
      */
     public function updateTags(?User $user, Video $video, LazyRelation $tags): bool
     {
-        $tags->collect()->each(fn(Tag $tag) => $tag);
+        return true;
 
-        return $this->owner($user, $video);
+//        $tags->collect()->each(fn(Tag $tag) => $tag);
+
+//        return $this->owner($user, $video);
     }
 
     /**
@@ -96,7 +104,9 @@ class VideoPolicy
      */
     public function attachTags(?User $user, Video $video, LazyRelation $tags): bool
     {
-        return $this->updateTags($user, $video, $tags);
+        return true;
+
+//        return $this->updateTags($user, $video, $tags);
     }
 
     /**
@@ -107,7 +117,9 @@ class VideoPolicy
      */
     public function detachTags(?User $user, Video $video, LazyRelation $tags): bool
     {
-        return $this->updateTags($user, $video, $tags);
+        return true;
+
+//        return $this->updateTags($user, $video, $tags);
     }
 
     /**
@@ -117,7 +129,9 @@ class VideoPolicy
      */
     public function delete(?User $user, Video $video): bool
     {
-        return $this->owner($user, $video);
+        return true;
+
+//        return $this->owner($user, $video);
     }
 
     /**
@@ -127,6 +141,8 @@ class VideoPolicy
      */
     public function owner(?User $user, Video $video): bool
     {
-        return $user && $video->owner->is($user);
+        return true;
+
+//        return $user && $video->owner->is($user);
     }
 }

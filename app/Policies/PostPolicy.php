@@ -43,11 +43,13 @@ class PostPolicy
      */
     public function view(?User $user, Post $post): bool
     {
-        if ($post->published_at) {
-            return true;
-        }
+        return true;
 
-        return $this->author($user, $post);
+//        if ($post->published_at) {
+//            return true;
+//        }
+//
+//        return $this->author($user, $post);
     }
 
     /**
@@ -57,7 +59,9 @@ class PostPolicy
      */
     public function viewAuthor(?User $user, Post $post): bool
     {
-        return $this->view($user, $post);
+        return true;
+
+//        return $this->view($user, $post);
     }
 
     /**
@@ -67,7 +71,9 @@ class PostPolicy
      */
     public function viewComments(?User $user, Post $post): bool
     {
-        return $this->view($user, $post);
+        return true;
+
+//        return $this->view($user, $post);
     }
 
     /**
@@ -77,7 +83,9 @@ class PostPolicy
      */
     public function viewMedia(?User $user, Post $post): bool
     {
-        return $this->view($user, $post);
+        return true;
+
+//        return $this->view($user, $post);
     }
 
     /**
@@ -87,7 +95,9 @@ class PostPolicy
      */
     public function viewTags(?User $user, Post $post): bool
     {
-        return $this->view($user, $post);
+        return true;
+
+//        return $this->view($user, $post);
     }
 
     /**
@@ -96,7 +106,9 @@ class PostPolicy
      */
     public function create(?User $user): bool
     {
-        return !!$user;
+        return true;
+
+//        return !!$user;
     }
 
     /**
@@ -106,7 +118,9 @@ class PostPolicy
      */
     public function update(?User $user, Post $post): bool
     {
-        return $this->author($user, $post);
+        return true;
+
+//        return $this->author($user, $post);
     }
 
     /**
@@ -128,9 +142,11 @@ class PostPolicy
      */
     public function updateTags(?User $user, Post $post, LazyRelation $tags): bool
     {
-        $tags->collect()->each(fn(Tag $tag) => $tag);
+        return true;
 
-        return $this->author($user, $post);
+//        $tags->collect()->each(fn(Tag $tag) => $tag);
+
+//        return $this->author($user, $post);
     }
 
     /**
@@ -152,7 +168,9 @@ class PostPolicy
      */
     public function attachTags(?User $user, Post $post, LazyRelation $tags): bool
     {
-        return $this->updateTags($user, $post, $tags);
+        return true;
+
+//        return $this->updateTags($user, $post, $tags);
     }
 
     /**
@@ -163,7 +181,9 @@ class PostPolicy
      */
     public function detachMedia(?User $user, Post $post, LazyRelation $tags): bool
     {
-        return $this->author($user, $post);
+        return true;
+
+//        return $this->author($user, $post);
     }
 
     /**
@@ -174,7 +194,9 @@ class PostPolicy
      */
     public function detachTags(?User $user, Post $post, LazyRelation $tags): bool
     {
-        return $this->updateTags($user, $post, $tags);
+        return true;
+
+//        return $this->updateTags($user, $post, $tags);
     }
 
     /**
@@ -184,7 +206,9 @@ class PostPolicy
      */
     public function delete(?User $user, Post $post): bool
     {
-        return $this->author($user, $post);
+        return true;
+
+//        return $this->author($user, $post);
     }
 
     /**
@@ -193,7 +217,9 @@ class PostPolicy
      */
     public function deleteAll(?User $user): bool
     {
-        return $user && $user->isAdmin();
+        return true;
+
+//        return $user && $user->isAdmin();
     }
 
     /**
@@ -203,6 +229,8 @@ class PostPolicy
      */
     public function author(?User $user, Post $post): bool
     {
-        return $user && $post->author->is($user);
+        return true;
+
+//        return $user && $post->author->is($user);
     }
 }
